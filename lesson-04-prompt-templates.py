@@ -15,3 +15,10 @@ llm = OpenAI(temperature=0.9)
 chain = LLMChain(llm=llm, prompt=prompt)
 
 print(chain.run({"company": "ABC Startup", "product": "colorful socks"}))
+
+#template = "How to deal with {problem}"
+#prompt=PromptTemplate.from_template(template)
+#print(prompt.format(problem="anxiety"))
+#llm= HuggingFaceHub(repo_id="google/flan-t5-base",model_kwargs={"temperature":1, "max_length":64})
+#chain=LLMChain(llm=llm,prompt=prompt)
+#print(chain.run({"problem":"lazy"}))
