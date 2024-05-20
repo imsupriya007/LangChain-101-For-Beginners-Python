@@ -8,6 +8,8 @@ from langchain.llms import OpenAI
 from langchain.agents import load_tools, initialize_agent
 from langchain.agents import AgentType
 
+#offer Human as a tool to Agent to ask anything personal/ human required as input
+
 llm = ChatOpenAI(temperature=0.0)
 math_llm = OpenAI(temperature=0.0)
 tools = load_tools(
