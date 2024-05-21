@@ -1,4 +1,9 @@
 # Plan and Execute Agents
+# first plan series of steps and then execute each one
+# LLM is not good in current affairs, wikipedia ques, math ques
+# Ex: Prompt - where is the next summer olympics going to be held? whats population of the country raised to power 0.43
+# Steps are 1. Search for the location 2. Identify the country 3. search for country population 4. Raise population to power 0.43 5. Return the result
+
 import os
 
 os.environ["OPENAI_API_KEY"] = "..."
