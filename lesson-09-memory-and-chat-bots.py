@@ -1,14 +1,14 @@
 # Memory and Chat Bots
+# Chains and Agents are stateless - execute one at a time, no memory; Chatbot needs memory
 import os
 
 os.environ["OPENAI_API_KEY"] = "..."
 
-from langchain import OpenAI, ConversationChain
+from langchain import OpenAI, ConversationChain # this chain has memory
 
 # Printing Predictions
 llm = OpenAI(temperature=0)
 conversation = ConversationChain(llm=llm, verbose=True)
-
 print(conversation.predict(input="Hi there!"))
 print(conversation.predict(input="Can we talk about weather?"))
 print(conversation.predict(input="It's a beautiful day today"))
