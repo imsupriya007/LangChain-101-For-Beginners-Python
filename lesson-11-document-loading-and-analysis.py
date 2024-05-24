@@ -34,6 +34,6 @@ embeddings = OpenAIEmbeddings()
 store = Chroma.from_documents(texts, embeddings, collection_name="state-of-union") # 3 parameters = text, embeddings and coll name to be created
 
 llm = OpenAI(temperature=0)
-# retrieve the qa chain from chromaDB
+# retrieve the qa chain from chromaDB - high similarlity score as words in prompts
 chain = RetrievalQA.from_chain_type(llm, retriever=store.as_retriever())
 print(chain.run("What did biden talk about Ohio?"))
