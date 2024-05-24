@@ -19,3 +19,6 @@ buffer = ConversationBufferMemory(chat_memory=history)
 conversation = ConversationChain(llm=llm, memory=buffer, verbose=True)
 
 print(conversation.predict(input="what are they?"))
+
+# the new chats keep auto adding
+print(conversation.memory)
